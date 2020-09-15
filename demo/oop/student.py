@@ -26,7 +26,7 @@ class Student:
         return f"{self.admno} - {self.name} - {self.course} - {self.feepaid}"
 
 
-s = Student(1, "Abc", "Python", 3000)
+s = Student(1, "Abc", "Python", 3000)  # Create object
 s.payment(3000)
 print(s.get_due())
 print(s)
