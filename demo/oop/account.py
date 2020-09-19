@@ -14,9 +14,16 @@ class SavingsAccount:
     def deposit(self, amount):
         self.balance += amount
 
+    def withdraw(self, amount):
+        if amount > self.balance:
+            raise ValueError("Insufficient Balance")
+
+        self.balance -= amount
+
 
 a1 = SavingsAccount(1, "Jack", 10000)  # create an object
 a1.deposit(20000)
+a1.withdraw(50000)
 print(a1)
 
 a2 = SavingsAccount(2, "Roberts")
