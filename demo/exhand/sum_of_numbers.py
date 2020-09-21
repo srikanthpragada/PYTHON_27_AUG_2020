@@ -9,6 +9,6 @@ for n in range(5):
     except ValueError:
         pass
     except Exception:
-        print("Sorry! Eror!")
+        print("Sorry! Error!")
 
 print("Total : ", total)
