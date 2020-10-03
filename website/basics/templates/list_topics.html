@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topics</title>
+</head>
+<body>
+<h2>Topics</h2>
+These are important topics covered in this course:
+<ul>
+    {% for topic in topics %}
+       <li> {{topic | upper }}</li>
+    {% endfor %}
+</ul>
+<hr/>
+{% if trainer %}
+    Trainer : {{trainer}}
+{% endif %}
+
+</body>
+</html>
