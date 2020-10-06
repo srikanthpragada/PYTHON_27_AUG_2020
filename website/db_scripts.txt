@@ -1,0 +1,12 @@
+CREATE TABLE authors (
+  auid INTEGER PRIMARY KEY AUTOINCREMENT,
+  fullname VARCHAR (30),
+  email VARCHAR (50) UNIQUE,
+  mobile VARCHAR (10)
+)
+
+insert into authors(fullname,email,mobile)
+   values('Malcolm Gladwell','gladwell@gmail.com','9494094443')
+
+insert into authors(fullname,email,mobile)
+   values('Tomas Friedman','friedman@gmail.com','9494944355')
