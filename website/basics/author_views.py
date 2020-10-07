@@ -62,13 +62,14 @@ def add_author_form(request):
                 cur.execute("insert into authors(fullname,email,mobile) values(?,?,?)",
                             (fullname, email, mobile))
                 con.commit()
-                con.close()
-                return redirect("/basics/authors")
+                return redirect("/basics/authors/")  # Redirect to another url
             except Exception as ex:
                 print("Error :", ex)
                 return render(request, 'db/add_author_form.html',
                               {'form': form,
                                'message': 'Sorry! Could not add author!'}
                               )
+            finally:
+                con.close()
         else:
             return render(request, 'db/add_author_form.html', {'form': form})
