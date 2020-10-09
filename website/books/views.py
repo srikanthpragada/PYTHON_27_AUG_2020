@@ -28,7 +28,7 @@ def book_delete(request, id):
         return render(request, 'delete.html', {'msg': 'Book Id Not Found!'})
     except Exception as ex:
         print(ex)  # Goes to server window
-        return render(request, 'delete.html', {'msg': 'Book could not be deleted!'})
+        return render(request, 'delete.html', {'msg': 'Sorry! Book could not be deleted!'})
 
 
 def book_add(request):

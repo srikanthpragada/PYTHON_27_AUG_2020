@@ -19,5 +19,6 @@ import basics.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('basics/', include('basics.urls'))
+    path('basics/', include('basics.urls')),
+    path('books/', include('books.urls'))
 ]

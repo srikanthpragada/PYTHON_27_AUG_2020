@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views, interest_views, author_views
+from . import views, interest_views, author_views, ajax_views
 
 urlpatterns = [
     path('welcome/', views.welcome),
@@ -14,5 +14,8 @@ urlpatterns = [
     path("add_author_form/", author_views.add_author_form),
     # Form URLs
     path("interest_form/", interest_views.interest_form),    # using Django form
-    path("interest_form_custom/", interest_views.interest_form_custom)
+    path("interest_form_custom/", interest_views.interest_form_custom),
+    # Ajax
+    path('ajax/', ajax_views.ajax_demo),
+    path('datetime/', ajax_views.send_datetime),
 ]
